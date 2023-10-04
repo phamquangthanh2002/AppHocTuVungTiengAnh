@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">projectt</string>
+=======
+    <string name="app_name">Edit</string>
+>>>>>>> c61e88504a8ed5d777dc19d8732f44596e0fbf2d
 </resources>
