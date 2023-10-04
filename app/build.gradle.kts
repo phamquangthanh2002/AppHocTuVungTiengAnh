@@ -3,21 +3,13 @@ plugins {
 }
 
 android {
-<<<<<<< HEAD
-    namespace = "com.example.projectt"
-    compileSdk = 33
 
-    defaultConfig {
-        applicationId = "com.example.projectt"
-        minSdk = 33
-=======
     namespace = "com.example.edit"
     compileSdk = 33
 
     defaultConfig {
         applicationId = "com.example.edit"
         minSdk = 31
->>>>>>> c61e88504a8ed5d777dc19d8732f44596e0fbf2d
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
