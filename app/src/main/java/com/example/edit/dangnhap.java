@@ -6,6 +6,6 @@ public class dangnhap extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dangnhap);
+        setContentView(R.layout.tdangnhap);
     }
 }
