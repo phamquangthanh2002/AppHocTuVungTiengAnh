@@ -86,6 +86,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
+
         android:id="@+id/li"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,4 +98,15 @@
         android:layout_gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/w"
         tools:ignore="Missingconstraints" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckButtonClick"
+        android:text="Check Answer"
+        app:layout_constraintBottom_toTopOf="@+id/w"
+        app:layout_constraintTop_toBottomOf="@+id/ed"
+        tools:layout_editor_absoluteX="256dp"
+        tools:ignore="Missingconstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
