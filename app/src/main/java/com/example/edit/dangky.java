@@ -2,11 +2,10 @@ package com.example.edit;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-public class dangnhap extends AppCompatActivity{
+public class dangky extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tdangnhap);
+        setContentView(R.layout.tdangky);
     }
 }
