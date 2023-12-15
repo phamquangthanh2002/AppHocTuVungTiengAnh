@@ -39,15 +39,15 @@ btnB =(Button) findViewById(R.id.button2);
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this,"Clicked", Toast.LENGTH_SHORT);
-                Intent intent = new Intent(MainActivity.this, dangnhap.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
         btnB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"Clicked", Toast.LENGTH_SHORT);
-                Intent intent = new Intent(MainActivity.this, dangky.class);
+                Toast.makeText(MainActivity.this,"Clicked", Toast.LENGTH_LONG);
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });

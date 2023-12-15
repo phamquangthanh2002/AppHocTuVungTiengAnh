@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:padding="15dp"
-    tools:context=".RegisterActivity"
+    tools:context=".LoginActivity"
     android:orientation="vertical">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/lottiemeoregister"
+        android:id="@+id/lottiemeo"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_alignParentBottom="true"
@@ -18,18 +18,18 @@
         android:elevation="5dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/gatgu"
+        app:lottie_rawRes="@raw/meologin"
         tools:layout_editor_absoluteX="5dp"
         tools:layout_editor_absoluteY="6dp" />
 
 
     <TextView
-        android:text="@string/register"
+        android:text="@string/login"
         android:layout_marginBottom="20dp"
         android:textSize="25sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_width="match_parent"
+android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         />
@@ -38,13 +38,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email2"
-            android:hint="@string/email"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email"
+        android:hint="@string/email"
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password2"
+            android:id="@+id/password"
             android:hint="@string/password"
 
             android:layout_width="match_parent"
@@ -67,28 +67,29 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:visibility="gone"
-android:layout_width="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
 
         />
-    <Button
-        android:id="@+id/btn_register"
-        android:text="@string/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<Button
+android:id="@+id/btn_login"
+    android:text="@string/login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
 
-        />
+    />
     <TextView
-        android:id="@+id/loginNow"
+        android:id="@+id/registerNow"
         android:textStyle="bold"
         android:textSize="20sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/click_to_login"
+        android:text="@string/click_to_register"
         android:gravity="center"
         android:layout_marginTop="20dp"
 
