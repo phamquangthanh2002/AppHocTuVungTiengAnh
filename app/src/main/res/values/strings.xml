@@ -6,4 +6,9 @@
     <string name="register">register</string>
     <string name="click_to_login">click_to_login</string>
     <string name="click_to_register">click_to_register</string>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
