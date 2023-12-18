@@ -44,7 +44,11 @@ public class Test extends AppCompatActivity implements NavigationView.OnNavigati
              Intent intent = new Intent(Test.this, Profile.class);
              startActivity(intent);
 
-         }
+         }else if (id == R.id.nav_time){
+             Toast.makeText(Test.this, "Menu Item 2 clicked", Toast.LENGTH_SHORT).show();
+             Intent intent = new Intent(Test.this, DashboardActivity.class);
+             startActivity(intent);
+        }
 
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
