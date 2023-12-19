@@ -40,10 +40,11 @@ android:layout_centerVertical="true"
       android:layout_height="wrap_content"
 android:indeterminate="false"
       android:maxHeight="12dp"
-      android:progress="10"
+      android:progress="100"
 android:minHeight="12dp"
     />
 <androidx.cardview.widget.CardView
+android:layout_marginBottom="40dp"
     app:cardCornerRadius="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginRight="10dp"
@@ -71,6 +72,7 @@ android:id="@+id/card_question"
 
 
   <androidx.cardview.widget.CardView
+      android:id="@+id/cardA"
       app:cardCornerRadius="10dp"
       android:layout_marginStart="60dp"
       android:layout_marginRight="10dp"
@@ -96,6 +98,7 @@ android:id="@+id/card_question"
         />
   </androidx.cardview.widget.CardView>
   <androidx.cardview.widget.CardView
+      android:id="@+id/cardB"
       app:cardCornerRadius="10dp"
       android:layout_marginStart="60dp"
       android:layout_marginRight="10dp"
@@ -121,6 +124,7 @@ android:id="@+id/card_question"
         />
   </androidx.cardview.widget.CardView>
   <androidx.cardview.widget.CardView
+      android:id="@+id/cardC"
       app:cardCornerRadius="10dp"
       android:layout_marginStart="60dp"
       android:layout_marginRight="10dp"
@@ -146,6 +150,7 @@ android:id="@+id/card_question"
         />
   </androidx.cardview.widget.CardView>
   <androidx.cardview.widget.CardView
+      android:id="@+id/cardD"
       app:cardCornerRadius="10dp"
       android:layout_marginStart="60dp"
       android:layout_marginRight="10dp"
@@ -170,30 +175,32 @@ android:id="@+id/card_question"
 
         />
   </androidx.cardview.widget.CardView>
-<LinearLayout
-android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginTop="50dp"
-    android:background="@drawable/next_btn_shape"
-    android:layout_marginStart="60dp"
-    android:layout_marginRight="10dp"
 
+  <androidx.cardview.widget.CardView
+      android:id="@+id/next"
+      app:cardCornerRadius="10dp"
+      android:layout_marginStart="100dp"
+      android:layout_marginRight="10dp"
+android:layout_marginTop="40dp"
+      android:layout_width="match_parent"
+      android:layout_marginEnd="100dp"
+      android:layout_height="80dp"
+      android:layout_marginLeft="10dp"
+      app:cardElevation="10dp"
 
-    android:layout_marginEnd="60dp"
-    android:gravity="center"
-    android:layout_marginLeft="10dp"
-    >
+      app:cardUseCompatPadding="true"
 
-<TextView
-android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:text="next"
-    android:layout_gravity="center"
+      >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:text="Câu tiếp theo"
 
-    />
-
-</LinearLayout>
+        />
+  </androidx.cardview.widget.CardView>
 
   </LinearLayout>
