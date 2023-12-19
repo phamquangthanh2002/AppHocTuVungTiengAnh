@@ -1,4 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.Projectt" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Projectt" parent="Theme.MaterialComponents.Light.NoActionBar">
     </style>
 </resources>

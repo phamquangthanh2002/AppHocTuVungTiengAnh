@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_gravity="center"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#ff9999">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        >
+
+
+    <TextView
+android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hết thời gian"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+
+        />
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottiemeo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="10dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/sad"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="6dp" />
+        <Button
+            android:id="@+id/btn_tryagain"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF6666"
+            android:text="Thử lại">
+
+
+        </Button>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
