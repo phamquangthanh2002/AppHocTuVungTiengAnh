@@ -1,0 +1,78 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_gravity="center"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="#A4C639"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kết quả"
+            android:gravity="center"
+            android:textSize="20dp"
+
+            android:textColor="@color/white"
+
+            />
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/rainbow"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/rainbow"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="6dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="số câu đúng "
+            android:textColor="@color/white"
+            android:layout_marginBottom="30dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/score"
+            />
+
+        <Button
+            android:id="@+id/btn_tryagain2"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FF6666"
+
+            android:text="Thử lại">
+
+
+        </Button>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -23,7 +23,10 @@ import java.util.Collections;
 public class DashboardActivity extends AppCompatActivity {
     public static ArrayList<Model> list;
     int index = 0;
+    int correct = 0;
+    int discorrect = 0;
     Button buttonpink;
+    Button buttonpink2;
     CountDownTimer countdowntimer;
 
     ProgressBar progressbar;
@@ -124,8 +127,10 @@ public class DashboardActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (question.getAns().equals("Lựa chọn A")) {
                         cardOA.setCardBackgroundColor(Color.GREEN);
+                        correct++;
                     } else {
                         cardOA.setCardBackgroundColor(Color.RED);
+                        discorrect++;
                     }
 
                 }
@@ -136,8 +141,10 @@ public class DashboardActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (question.getAns().equals("Lựa chọn B")) {
                         cardOB.setCardBackgroundColor(Color.GREEN);
+                        correct++;
                     } else {
                         cardOB.setCardBackgroundColor(Color.RED);
+                        discorrect++;
                     }
 
                 }
@@ -148,8 +155,10 @@ public class DashboardActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (question.getAns().equals("Lựa chọn C")) {
                         cardOC.setCardBackgroundColor(Color.GREEN);
+                        correct++;
                     } else {
                         cardOC.setCardBackgroundColor(Color.RED);
+                        discorrect++;
                     }
 
                 }
@@ -161,8 +170,10 @@ public class DashboardActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (question.getAns().equals("Lựa chọn D")) {
                         cardOD.setCardBackgroundColor(Color.GREEN);
+                        correct++;
                     } else {
                         cardOD.setCardBackgroundColor(Color.RED);
+                        discorrect++;
                     }
 
                 }
@@ -185,11 +196,36 @@ public class DashboardActivity extends AppCompatActivity {
         countdowntimer.start();
 
         index++;
-        if (index < list.size()) {
+        if (index >= list.size()) {
 
+            showResultDialog();
+
+
+        }else{
             setAllData();
 
         }
 
+    }
+    private void showResultDialog(){
+        progressbar.setProgress(0);
+        Dialog dialog = new Dialog(DashboardActivity.this);
+        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+        dialog.setContentView(R.layout.won_activity);
+        TextView textViewCorrect = dialog.findViewById(R.id.score);
+        textViewCorrect.setText("score: " + correct);
+
+        buttonpink2 = dialog.findViewById(R.id.btn_tryagain2);
+
+
+        buttonpink2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(DashboardActivity.this, "Menu Item 1 clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DashboardActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
+        dialog.show();
     }
 }
