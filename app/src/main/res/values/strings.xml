@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">projectt</string>
+    <style name="CustomTabLayoutText" parent="Widget.Design.TabLayout">
+        <item name="android:textSize">12sp</item>
+
+    </style>
+    <string name="app_name"><font color="#FFFFFF">Learn english </font></string>
     <string name="login">login</string>
     <string name="email">email</string>
     <string name="password">pasword</string>
