@@ -12,8 +12,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.*;
 
@@ -35,7 +39,22 @@ public class Test extends AppCompatActivity implements NavigationView.OnNavigati
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        // Khai báo Adapter
+        MyPagerAdapter pagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+
+        // Set Adapter cho ViewPager
+        viewPager.setAdapter(pagerAdapter);
+
+        // Set TabLayout kết nối với ViewPager
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.learn_icon).setText("vocabulary");
+        tabLayout.getTabAt(1).setIcon(R.drawable.aorb).setText("Game1");
+        tabLayout.getTabAt(2).setIcon(R.drawable.quiz).setText("Game2");
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
@@ -61,4 +80,5 @@ public class Test extends AppCompatActivity implements NavigationView.OnNavigati
             super.onBackPressed();
         }
     }
+
 }
