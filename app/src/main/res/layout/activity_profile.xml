@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context=".Profile">
+
+
+
+
     <TextView
+        android:id="@+id/user_details"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="adudu"
+        android:layout_above="@+id/logout"
+        android:layout_marginBottom="120dp"
+        android:layout_marginLeft="30dp"
+        android:text="hello"
+        android:textSize="30dp"
         />
 
-</LinearLayout>
+
+
+
+    <Button
+
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="174dp"
+        android:text="logout" />
+
+</RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.edit;
 
 import static android.app.ProgressDialog.show;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -17,6 +18,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -28,7 +35,7 @@ public class DashboardActivity extends AppCompatActivity {
     Button buttonpink;
     Button buttonpink2;
     CountDownTimer countdowntimer;
-
+DatabaseReference databasereference;
     ProgressBar progressbar;
     TextView card_question, optiona, optionb, optionc, optiond;
     CardView cardOA, cardOB, cardOC, cardOD, cardOE;
@@ -43,14 +50,38 @@ public class DashboardActivity extends AppCompatActivity {
         cardOE = findViewById(R.id.next);
 
         list = new ArrayList<>();
-        Collections.shuffle(list);
-        Model question1 = new Model("Câu hỏi 1", "Lựa chọn A", "Lựa chọn B", "Lựa chọn C", "Lựa chọn D", "Lựa chọn C");
+
+
+        databasereference= FirebaseDatabase.getInstance().getReference("Question");
+        databasereference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
+                    Model model = dataSnapshot.getValue(Model.class);
+                    list.add(model);
+                }
+
+                setAllData();
+                next();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệu Firebase: " + error.getMessage(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        /* Model question1 = new Model("Câu hỏi 1", "Lựa chọn A", "Lựa chọn B", "Lựa chọn C", "Lựa chọn D", "Lựa chọn C");
         list.add(question1);
         Model question2 = new Model("Câu hỏi 2", "Lựa chọn A", "Lựa chọn B", "Lựa chọn C", "Lựa chọn D", "Lựa chọn D");
         list.add(question2);
 
-        setAllData();
-        next();
+         */
+
+
+
         progressbar = findViewById(R.id.quiz_timer);
 
 
@@ -125,7 +156,7 @@ public class DashboardActivity extends AppCompatActivity {
             cardOA.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (question.getAns().equals("Lựa chọn A")) {
+                    if (optiona.getText().toString().equals(question.getAns())) {
                         cardOA.setCardBackgroundColor(Color.GREEN);
                         correct++;
                     } else {
@@ -139,7 +170,7 @@ public class DashboardActivity extends AppCompatActivity {
             cardOB.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (question.getAns().equals("Lựa chọn B")) {
+                    if (optionb.getText().toString().equals(question.getAns())) {
                         cardOB.setCardBackgroundColor(Color.GREEN);
                         correct++;
                     } else {
@@ -153,7 +184,7 @@ public class DashboardActivity extends AppCompatActivity {
             cardOC.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (question.getAns().equals("Lựa chọn C")) {
+                    if (optionc.getText().toString().equals(question.getAns())) {
                         cardOC.setCardBackgroundColor(Color.GREEN);
                         correct++;
                     } else {
@@ -168,7 +199,7 @@ public class DashboardActivity extends AppCompatActivity {
             cardOD.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (question.getAns().equals("Lựa chọn D")) {
+                    if (optiond.getText().toString().equals(question.getAns())) {
                         cardOD.setCardBackgroundColor(Color.GREEN);
                         correct++;
                     } else {
@@ -203,6 +234,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         }else{
             setAllData();
+            resetColor();
 
         }
 

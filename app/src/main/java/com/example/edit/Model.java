@@ -2,6 +2,9 @@ package com.example.edit;
 
 public class Model {
     String Quetion, oa, ob, oc, od ,ans;
+    public Model(){
+
+    }
 
     public Model(String quetion, String oa, String ob, String oc, String od, String ans) {
         Quetion = quetion;
