@@ -89,7 +89,7 @@ public class Game2Fragment extends Fragment {
         textView.setClickable(true);
         textView.setFocusable(true);
         textView.setGravity(Gravity.CENTER);
-        textView.setTextSize(32);
+        textView.setTextSize(22);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,8 +142,7 @@ public class Game2Fragment extends Fragment {
 
             startNewRound(fragmentView); // Start a new round after a correct answer
         } else {
-            editText.setText("");
-            Toast.makeText(requireContext(), "Check", Toast.LENGTH_SHORT).show();
+
 
             linearLayout.removeAllViews();
 
