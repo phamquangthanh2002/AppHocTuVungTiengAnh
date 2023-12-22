@@ -30,10 +30,11 @@ import java.util.Collections;
 public class DashboardActivity extends AppCompatActivity {
     public static ArrayList<Model> list;
     int index = 0;
+    Dialog dialog;
     int correct = 0;
     int discorrect = 0;
     Button buttonpink;
-    Button buttonpink2;
+    Button buttonpink2, buttonpink3, buttonpink4;
     CountDownTimer countdowntimer;
 DatabaseReference databasereference;
     ProgressBar progressbar;
@@ -157,11 +158,13 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
                 @Override
                 public void onClick(View view) {
                     if (optiona.getText().toString().equals(question.getAns())) {
-                        cardOA.setCardBackgroundColor(Color.GREEN);
+
                         correct++;
+                        trueSelect();
                     } else {
-                        cardOA.setCardBackgroundColor(Color.RED);
+
                         discorrect++;
+                        falseSelect();
                     }
 
                 }
@@ -171,11 +174,13 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
                 @Override
                 public void onClick(View view) {
                     if (optionb.getText().toString().equals(question.getAns())) {
-                        cardOB.setCardBackgroundColor(Color.GREEN);
+
                         correct++;
+                        trueSelect();
                     } else {
-                        cardOB.setCardBackgroundColor(Color.RED);
+
                         discorrect++;
+                        falseSelect();
                     }
 
                 }
@@ -185,11 +190,13 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
                 @Override
                 public void onClick(View view) {
                     if (optionc.getText().toString().equals(question.getAns())) {
-                        cardOC.setCardBackgroundColor(Color.GREEN);
+
                         correct++;
+                        trueSelect();
                     } else {
-                        cardOC.setCardBackgroundColor(Color.RED);
+
                         discorrect++;
+                        falseSelect();
                     }
 
                 }
@@ -200,11 +207,13 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
                 @Override
                 public void onClick(View view) {
                     if (optiond.getText().toString().equals(question.getAns())) {
-                        cardOD.setCardBackgroundColor(Color.GREEN);
+
                         correct++;
+                        trueSelect();
                     } else {
-                        cardOD.setCardBackgroundColor(Color.RED);
+
                         discorrect++;
+                        falseSelect();
                     }
 
                 }
@@ -239,6 +248,8 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
         }
 
     }
+
+    //dialog lúc win
     private void showResultDialog(){
         progressbar.setProgress(0);
         Dialog dialog = new Dialog(DashboardActivity.this);
@@ -259,5 +270,55 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
             }
         });
         dialog.show();
+    }
+
+
+
+    //dialog khi chọn đúng
+    private void trueSelect(){
+        progressbar.setProgress(0);
+        Dialog dialog = new Dialog(DashboardActivity.this);
+        dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+        dialog.setContentView(R.layout.select_true);
+
+
+        buttonpink3 = dialog.findViewById(R.id.btn_tryagain3);
+
+        dialog.show();
+        buttonpink3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                dialog.dismiss();
+
+                goToNextQuestion();
+
+            }
+        });
+
+    }
+
+
+
+    private void falseSelect(){
+        progressbar.setProgress(0);
+        Dialog dialog = new Dialog(DashboardActivity.this);
+
+        dialog.setContentView(R.layout.select_false);
+
+
+        buttonpink4 = dialog.findViewById(R.id.btn_tryagain4);
+
+        dialog.show();
+        buttonpink4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                dialog.dismiss();
+
+                goToNextQuestion();
+
+            }
+        });
     }
 }
