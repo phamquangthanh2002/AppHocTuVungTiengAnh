@@ -34,7 +34,7 @@
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/rainbow"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="60dp"
 
 
             app:lottie_autoPlay="true"
@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             android:text="số câu đúng "
             android:textColor="@color/white"
-            android:layout_marginBottom="30dp"
+
 
             />
 
@@ -67,11 +67,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:backgroundTint="#FF6666"
-
+android:layout_marginBottom="10dp"
             android:text="Thử lại">
 
 
         </Button>
+        <Button
+            android:id="@+id/buttonexit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF6666"
+            android:text="thoát">
+    </Button>
+
 
 
     </LinearLayout>

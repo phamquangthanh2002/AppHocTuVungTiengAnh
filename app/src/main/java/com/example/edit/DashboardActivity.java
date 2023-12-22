@@ -34,11 +34,11 @@ public class DashboardActivity extends AppCompatActivity {
     int correct = 0;
     int discorrect = 0;
     Button buttonpink;
-    Button buttonpink2, buttonpink3, buttonpink4;
+    Button buttonpink2, buttonpink3, buttonpink4, button5;
     CountDownTimer countdowntimer;
 DatabaseReference databasereference;
     ProgressBar progressbar;
-    TextView card_question, optiona, optionb, optionc, optiond;
+    TextView card_question, optiona, optionb, optionc, optiond, exit;
     CardView cardOA, cardOB, cardOC, cardOD, cardOE;
     private static final long Intervall = 1000;
     private static final long Countdown_time = 20000;
@@ -49,6 +49,7 @@ DatabaseReference databasereference;
         setContentView(R.layout.activity_dashboard);
 
         cardOE = findViewById(R.id.next);
+        exitSelect();
 
         list = new ArrayList<>();
 
@@ -249,7 +250,10 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
 
     }
 
-    //dialog lúc win
+    //dialog khi làm hết câu hỏi
+
+
+
     private void showResultDialog(){
         progressbar.setProgress(0);
         Dialog dialog = new Dialog(DashboardActivity.this);
@@ -259,13 +263,22 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
         textViewCorrect.setText("score: " + correct);
 
         buttonpink2 = dialog.findViewById(R.id.btn_tryagain2);
-
+button5 = dialog.findViewById(R.id.buttonexit);
 
         buttonpink2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(DashboardActivity.this, "Menu Item 1 clicked", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DashboardActivity.this, DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, Test.class);
                 startActivity(intent);
             }
         });
@@ -318,6 +331,16 @@ Toast.makeText(DashboardActivity.this,"Lỗi khi truy xuất cơ sở dữ liệ
 
                 goToNextQuestion();
 
+            }
+        });
+    }
+    private void exitSelect(){
+        exit = findViewById(R.id.ic_exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, Test.class);
+                startActivity(intent);
             }
         });
     }
