@@ -34,7 +34,7 @@ public class Game2Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game2, container, false);
 
-        wordList = new ArrayList<>(Arrays.asList("FROG", "BEAR", "DOG", "FISH", "SHARK"));
+        wordList = new ArrayList<>(Arrays.asList("FROG", "CHICKEN", "DOG", "FISH", "CRAB", "CAT", "PIG", "BIRD", "MOUSE", "SHRIMP", "DUCK", "PENGUIN"));
 
         startNewRound(view);
 
@@ -61,7 +61,7 @@ public class Game2Fragment extends Fragment {
     private void startNewRound(View view) {
         if (wordList.isEmpty()) {
             // All words have been used, reset the list for the next round
-            wordList.addAll(Arrays.asList("FROG", "BEAR", "DOG", "FISH", "SHARK"));
+            wordList.addAll(Arrays.asList("FROG", "CHICKEN", "DOG", "FISH", "CRAB", "CAT", "PIG", "BIRD", "MOUSE", "SHRIMP", "DUCK", "PENGUIN"));
         }
 
         textAnswer = getRandomWord();
