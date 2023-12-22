@@ -76,13 +76,25 @@ android:layout_width="match_parent"
 
 
         />
-<Button
-android:id="@+id/btn_login"
-    android:text="@string/login"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
 
-    />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="@string/login"
+        />
+    <TextView
+        android:id="@+id/forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="forgot password?"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"/>
+
     <TextView
         android:id="@+id/registerNow"
         android:textStyle="bold"
