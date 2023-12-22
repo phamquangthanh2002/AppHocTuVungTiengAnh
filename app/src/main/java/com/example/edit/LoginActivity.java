@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
     FirebaseAuth mAuth;
-    TextView textView;
+    TextView textView, a;
 
 
     @Override
@@ -48,12 +48,27 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
+
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);
         editTextPassword = findViewById(R.id.password);
         buttonReg = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progressBar);
         textView = findViewById(R.id.registerNow);
+
+        a = findViewById(R.id.forgot_password);
+
+
+        a.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, resetpastword.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,10 +103,10 @@ public class LoginActivity extends AppCompatActivity {
                                 progressBar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-Toast.makeText(getApplicationContext(), "Login thành công", Toast.LENGTH_SHORT).show();
-Intent intent = new Intent(getApplicationContext(), Test.class);
-startActivity(intent);
-finish();
+                                    Toast.makeText(getApplicationContext(), "Login thành công", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(getApplicationContext(), Test.class);
+                                    startActivity(intent);
+                                    finish();
                                 } else {
 
                                     Toast.makeText(LoginActivity.this, "Authentication failed.",
