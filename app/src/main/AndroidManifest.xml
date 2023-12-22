@@ -15,7 +15,16 @@
         android:theme="@style/Base.Theme.Projectt"
         tools:targetApi="31">
         <activity
-            android:name=".Won"
+            android:name=".listItem1"
+            android:exported="false" />
+        <activity
+            android:name=".listItem2"
+            android:exported="false" />
+        <activity
+            android:name=".mainItemAnimals"
+            android:exported="false" />
+        <activity
+            android:name=".mainItemThings"
             android:exported="false" />
         <activity
             android:name=".DashboardActivity"
@@ -33,9 +42,6 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -43,13 +49,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".dangnhap"
-            android:exported="true" />
-        <activity
-            android:name=".dangky"
-            android:exported="true" />
     </application>
 
 </manifest>

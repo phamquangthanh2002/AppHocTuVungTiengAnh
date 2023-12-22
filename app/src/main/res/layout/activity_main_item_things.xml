@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".mainItemThings"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click the image to see the things name"
+            android:textSize="24sp"
+            android:textColor="#00A9FF"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Table"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/table"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca1"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Broom"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/broom"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Pen"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/pen"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca3"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Lamp"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/lamp"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca4"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Watch"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/watch"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca5"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Desk"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/desk"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca6"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Chair"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/chair"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca7"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Backpack"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:onClick="onImageClick"
+                        android:src="@drawable/backpack">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca8"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Fan"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/fan"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca9"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Book"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/book"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/voca10"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    app:cardElevation="8dp">
+
+                    <TextView
+                        android:id="@+id/text_main10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Painting"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#A1EEBD"
+                        android:gravity="center"
+                        android:onClick="onTextClick">
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/imagevoca10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/painting"
+                        android:clickable="true"
+                        android:onClick="onImageClick">
+
+                    </ImageView>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

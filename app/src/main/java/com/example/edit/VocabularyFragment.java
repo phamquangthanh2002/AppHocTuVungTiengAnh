@@ -34,6 +34,24 @@ public class VocabularyFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        LinearLayout llinearLayout = view.findViewById(R.id.aaaa);
+        llinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), listItem2.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout lllinearLayout = view.findViewById(R.id.aaaaa);
+        lllinearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(), listItem1.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

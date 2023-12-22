@@ -4,5 +4,8 @@
 
     <style name="Theme.Projectt" parent="Base.Theme.Projectt" />
 
-
+    <style name="hahahaha">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

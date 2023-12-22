@@ -142,7 +142,10 @@
                         android:layout_height="match_parent"
                         android:background="#80ffffff"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/aaaa"
+                        android:clickable="true"
+                        android:onClick="openAnotherActivity">
 
                         <ImageView
                             android:layout_width="80dp"
@@ -182,7 +185,10 @@
                         android:layout_height="match_parent"
                         android:background="#80ffffff"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:id="@+id/aaaaa"
+                        android:clickable="true"
+                        android:onClick="openAnotherActivity">
 
                         <ImageView
                             android:layout_width="80dp"
